@@ -1,0 +1,55 @@
+/* Fallback stuff */
+progress[value] {
+    appearance: none; /* Needed for Safari */
+    border: none; /* Needed for Firefox */
+    color: #e52e71; /* Fallback to a solid color */
+    width: 100%;
+}
+
+  /* WebKit styles */
+  progress[value]::-webkit-progress-value {
+    background-image: linear-gradient(
+      to right,
+      #ff8a00, #e52e71
+    );
+    transition: width 1s linear;
+  }
+  
+  /* Firefox styles */
+  progress[value]::-moz-progress-bar {
+    background-image: -moz-linear-gradient(
+      right,
+      #ff8a00, #e52e71
+    );
+  }
+
+  body{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  label{
+    color: white;
+  }
+  .Control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .player {
+    background: rgb(224,43,26);
+    background: linear-gradient(150deg, rgba(224,43,26,1) 0%, rgba(56,11,7,1) 75%, rgba(0,0,0,1) 100%); 
+    padding-bottom: 2rem;
+    border-radius: 15px;
+  }
+  figcaption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #progressBar {
+    width: 100%;
+  }
+
